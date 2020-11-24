@@ -1,6 +1,9 @@
 import express, { request, response } from "express";
+//import cors from "cors";
+
 const app = express();
 app.use(express.json());
+//app.use(cors());
 
 var lsEvento: Array<Evento> = [
     {
@@ -141,6 +144,6 @@ app.delete('/evento/:codEvento', (request, response)=>{
 })
 
 
-app.listen(12173, ()=>{
+app.listen(3333, ()=>{
     console.log('App inicializado')
 })
